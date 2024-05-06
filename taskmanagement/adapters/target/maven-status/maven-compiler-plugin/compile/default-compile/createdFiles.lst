@@ -1,0 +1,6 @@
+de\dhbw\softwareengineering\taskmanagement\adapters\aufgabe\AufgabeDto.class
+de\dhbw\softwareengineering\taskmanagement\adapters\aufgabe\AufgabeDtoToEntityMapper.class
+de\dhbw\softwareengineering\taskmanagement\adapters\benutzer\BenutzerDtoToEntityMapper.class
+de\dhbw\softwareengineering\taskmanagement\adapters\benutzer\BenutzerDto.class
+de\dhbw\softwareengineering\taskmanagement\adapters\benutzer\BenutzerEntityDtoMapper.class
+de\dhbw\softwareengineering\taskmanagement\adapters\aufgabe\AufgabeEntityDtoMapper.class

@@ -1,0 +1,13 @@
+de\dhbw\softwareengineering\taskmanagement\MainApplication.class
+de\dhbw\softwareengineering\taskmanagement\plugins\persistence\aufgabe\AufgabeJpa.class
+de\dhbw\softwareengineering\taskmanagement\plugins\persistence\benutzer\BenutzerJpaToEntityMapper.class
+de\dhbw\softwareengineering\taskmanagement\plugins\persistence\benutzer\BenutzerJpaRepository.class
+de\dhbw\softwareengineering\taskmanagement\plugins\persistence\aufgabe\AufgabeJpaRepository.class
+de\dhbw\softwareengineering\taskmanagement\plugins\persistence\aufgabe\AufgabeRepositoryImpl.class
+de\dhbw\softwareengineering\taskmanagement\plugins\persistence\benutzer\BenutzerRepositoryImpl.class
+de\dhbw\softwareengineering\taskmanagement\plugins\persistence\aufgabe\AufgabeEntitiyToJpaMapper.class
+de\dhbw\softwareengineering\taskmanagement\plugins\rest\AufgabeController.class
+de\dhbw\softwareengineering\taskmanagement\plugins\persistence\aufgabe\AufgabeJpaToEntityMapper.class
+de\dhbw\softwareengineering\taskmanagement\plugins\persistence\benutzer\BenutzerJpa.class
+de\dhbw\softwareengineering\taskmanagement\plugins\persistence\benutzer\BenutzerEntityToJpaMapper.class
+de\dhbw\softwareengineering\taskmanagement\plugins\rest\BenutzerController.class
