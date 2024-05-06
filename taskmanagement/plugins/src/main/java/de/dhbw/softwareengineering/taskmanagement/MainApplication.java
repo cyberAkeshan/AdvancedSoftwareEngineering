@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableJpaRepositories(basePackages = "de.dhbw.softwareengineering.taskmanagement.plugins")
-@EntityScan("de.dhbw.softwareengineering.writingorganizer.plugins")
+@EntityScan("de.dhbw.softwareengineering.taskmanagement.plugins")
 public class MainApplication {
 
     public static void main(String[] args) {

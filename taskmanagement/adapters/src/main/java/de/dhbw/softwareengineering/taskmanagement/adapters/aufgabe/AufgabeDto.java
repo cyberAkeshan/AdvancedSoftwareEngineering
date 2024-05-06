@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class AufgabeDto {
 
     private String titel;
-    private String kommentar; // das muss man überall löschen
+    private String kommentar;
     private String schluesselwort;
     private boolean erledigt;
     private LocalDateTime faelligkeit;

@@ -1,5 +1,4 @@
 package de.dhbw.softwareengineering.taskmanagement.domain.aufgabe;
-
 import java.time.LocalDateTime;
 
 public class AufgabeEntity {

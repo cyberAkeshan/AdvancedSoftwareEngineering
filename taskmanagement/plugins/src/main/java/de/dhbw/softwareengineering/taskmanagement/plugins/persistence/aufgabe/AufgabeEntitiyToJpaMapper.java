@@ -89,7 +89,7 @@ public class AufgabeEntitiyToJpaMapper {
     }
 
     private void mapEntitySchluesselwortToJpa(AufgabeEntity entity, AufgabeJpa jpa) {
-        if(entity.getSchluesselwort().isEmpty()) {
+        if(entity.getSchluesselwort() == null) {
             jpa.setSchluesselwort(null);
             return;
         }
