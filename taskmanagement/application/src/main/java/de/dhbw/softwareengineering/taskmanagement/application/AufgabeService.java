@@ -47,4 +47,10 @@ public class AufgabeService {
         repository.delete(titel);
     }
 
+    // ??
+    public void sendErinnerung (AufgabeDto dto) {
+        BenutzerService benutzerService = new BenutzerService();
+        benutzerService.findBenutzerById(dto.getBenutzer());
+    }
+
 }
