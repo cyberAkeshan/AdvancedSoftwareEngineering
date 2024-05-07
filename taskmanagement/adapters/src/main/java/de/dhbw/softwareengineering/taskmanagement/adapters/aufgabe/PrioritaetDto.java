@@ -35,7 +35,7 @@ public class PrioritaetDto {
     }
 
     public void setPrioritaet(int prioritaetCode) {
-        switch (prioritaetCode) { // refactor later
+        switch (prioritaetCode) {
             case 1:
                 this.prioritaet = Prioritaet.EINFACH;
                 break;
