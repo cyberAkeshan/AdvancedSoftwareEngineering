@@ -1,5 +1,6 @@
 package de.dhbw.softwareengineering.taskmanagement.plugins.persistence.aufgabe;
 
+import de.dhbw.softwareengineering.taskmanagement.domain.aufgabe.ErinnerungValue;
 import de.dhbw.softwareengineering.taskmanagement.domain.aufgabe.PrioritaetValue;
 import jakarta.persistence.*;
 
@@ -27,8 +28,8 @@ public class AufgabeJpa {
     private boolean erledigt;
 
     @Basic
-    @Column(name = "faelligkeit")
-    private LocalDateTime faelligkeit;
+    @Column(name = "erinnerung")
+    private LocalDateTime erinnerung;
 
     @Basic
     @Column(name = "benutzer")
@@ -85,12 +86,12 @@ public class AufgabeJpa {
         this.erledigt = erledigt;
     }
 
-    public LocalDateTime getFaelligkeit() {
-        return faelligkeit;
+    public LocalDateTime getErinnerung() {
+        return erinnerung;
     }
 
-    public void setFaelligkeit(LocalDateTime faelligkeit) {
-        this.faelligkeit = faelligkeit;
+    public void setErinnerung(LocalDateTime erinnerung) {
+        this.erinnerung = erinnerung;
     }
 
     @Override
@@ -98,11 +99,11 @@ public class AufgabeJpa {
         if (this == o) return true;
         if (o == null || getClass()!= o.getClass()) return false;
         AufgabeJpa aufgabeJpa = (AufgabeJpa) o;
-        return Objects.equals(titel, aufgabeJpa.titel) && Objects.equals(kommentar, aufgabeJpa.kommentar) && Objects.equals(schluesselwort, aufgabeJpa.schluesselwort) && Objects.equals(faelligkeit, aufgabeJpa.faelligkeit) && Objects.equals(erledigt, aufgabeJpa.erledigt) && Objects.equals(benutzer, aufgabeJpa.benutzer);
+        return Objects.equals(titel, aufgabeJpa.titel) && Objects.equals(kommentar, aufgabeJpa.kommentar) && Objects.equals(schluesselwort, aufgabeJpa.schluesselwort) && Objects.equals(erinnerung, aufgabeJpa.erinnerung) && Objects.equals(erledigt, aufgabeJpa.erledigt) && Objects.equals(benutzer, aufgabeJpa.benutzer);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(titel, kommentar, schluesselwort, faelligkeit, erledigt, benutzer);
+        return Objects.hash(titel, kommentar, schluesselwort, erinnerung, erledigt, benutzer);
     }
 }

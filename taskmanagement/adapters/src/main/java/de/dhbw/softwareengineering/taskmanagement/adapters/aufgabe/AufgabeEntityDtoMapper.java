@@ -13,7 +13,7 @@ public class AufgabeEntityDtoMapper {
         dto.setKommentar(entity.getKommentar());
         dto.setSchluesselwort(entity.getSchluesselwort());
         dto.setErledigt(entity.isErledigt());
-        dto.setFaelligkeit(entity.getFaelligkeit());
+        dto.setErinnerung(entity.getErinnerungValue().getFaelligkeit());
         dto.setBenutzer(entity.getBenutzer());
         return dto;
     }

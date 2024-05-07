@@ -26,7 +26,7 @@ public class BenutzerJpaToEntityMapper {
         benutzerEntity.setEmail(benutzerJpa.getEmail());
 
         List<AufgabeJpa> aufgabenVonBenutzer = aufgabeJpaRepository.findByBenutzer(benutzerJpa.getId());
-        aufgabenVonBenutzer.sort(Comparator.comparing(AufgabeJpa::getFaelligkeit)); // sollte nach Faelligkeit sortiert werden
+        aufgabenVonBenutzer.sort(Comparator.comparing(AufgabeJpa::getErinnerung)); // sollte nach Faelligkeit sortiert werden
 
         List<String> aufgabenTitelVonBenutzer = new ArrayList<>();
         aufgabenVonBenutzer.forEach(AufgabeEntity -> {

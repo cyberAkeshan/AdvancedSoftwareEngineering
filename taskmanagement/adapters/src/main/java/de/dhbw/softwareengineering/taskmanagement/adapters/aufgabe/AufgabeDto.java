@@ -8,7 +8,7 @@ public class AufgabeDto {
     private String kommentar;
     private String schluesselwort;
     private boolean erledigt;
-    private LocalDateTime faelligkeit;
+    private ErinnerungDto erinnerung;
     private Integer benutzer;
     private PrioritaetDto prioritaet;
 
@@ -44,14 +44,6 @@ public class AufgabeDto {
         this.erledigt = erledigt;
     }
 
-    public LocalDateTime getFaelligkeit() {
-        return faelligkeit;
-    }
-
-    public void setFaelligkeit(LocalDateTime faelligkeit) {
-        this.faelligkeit = faelligkeit;
-    }
-
     public Integer getBenutzer() {
         return benutzer;
     }
@@ -66,5 +58,13 @@ public class AufgabeDto {
 
     public void setPrioritaet(int prioritaetCode) {
         this.prioritaet.setPrioritaet(prioritaetCode);
+    }
+
+    public ErinnerungDto getErinnerung() {
+        return erinnerung;
+    }
+
+    public void setErinnerung(LocalDateTime erinnerung) {
+        this.erinnerung.setFaelligkeit(erinnerung);
     }
 }

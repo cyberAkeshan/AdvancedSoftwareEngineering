@@ -7,7 +7,7 @@ public class AufgabeEntity {
     private String kommentar;
     private String schluesselwort;
     private boolean erledigt;
-    private LocalDateTime faelligkeit;
+    private ErinnerungValue erinnerungValue;
     private Integer benutzer;
     private PrioritaetValue prioritaet;
 
@@ -43,14 +43,6 @@ public class AufgabeEntity {
         this.erledigt = erledigt;
     }
 
-    public LocalDateTime getFaelligkeit() {
-        return faelligkeit;
-    }
-
-    public void setFaelligkeit(LocalDateTime faelligkeit) {
-        this.faelligkeit = faelligkeit;
-    }
-
     public Integer getBenutzer() {
         return benutzer;
     }
@@ -65,5 +57,13 @@ public class AufgabeEntity {
 
     public void setPrioritaet(int prioritaetCode) {
         this.prioritaet.setPrioritaet(prioritaetCode);
+    }
+
+    public ErinnerungValue getErinnerungValue() {
+        return erinnerungValue;
+    }
+
+    public void setErinnerungValue(LocalDateTime erinnerung) {
+        this.erinnerungValue.setFaelligkeit(erinnerung);
     }
 }

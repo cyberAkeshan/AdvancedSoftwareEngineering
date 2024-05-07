@@ -16,11 +16,11 @@ public class AufgabeJpaToEntityMapper {
 
         aufgabeEntity.setTitel(aufgabeJpa.getTitel());
         aufgabeEntity.setErledigt(aufgabeJpa.isErledigt());
-        aufgabeEntity.setFaelligkeit(aufgabeJpa.getFaelligkeit());
         aufgabeEntity.setSchluesselwort(aufgabeJpa.getSchluesselwort());
         aufgabeEntity.setBenutzer(aufgabeJpa.getBenutzer());
         aufgabeEntity.setPrioritaet(aufgabeJpa.getPrioritaet());
-        //aufgabeEntity.setKommentar(aufgabeJpa.getKommentar());
+        aufgabeEntity.setErinnerungValue(aufgabeJpa.getErinnerung());
+        aufgabeEntity.setKommentar(aufgabeJpa.getKommentar());
         // ....
         return aufgabeEntity;
     }

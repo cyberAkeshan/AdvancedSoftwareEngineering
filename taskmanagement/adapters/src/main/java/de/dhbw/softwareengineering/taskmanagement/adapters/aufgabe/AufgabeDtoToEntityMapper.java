@@ -14,7 +14,7 @@ public class AufgabeDtoToEntityMapper {
         entity.setErledigt(dto.isErledigt());
         entity.setKommentar(dto.getKommentar());
         entity.setSchluesselwort(dto.getSchluesselwort());
-        entity.setFaelligkeit(dto.getFaelligkeit());
+        entity.setErinnerungValue(dto.getErinnerung().getFaelligkeit());
         entity.setBenutzer(dto.getBenutzer());
         return entity;
     }

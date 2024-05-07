@@ -6,3 +6,4 @@ de\dhbw\softwareengineering\taskmanagement\adapters\benutzer\BenutzerDtoToEntity
 de\dhbw\softwareengineering\taskmanagement\adapters\aufgabe\PrioritaetDto$Prioritaet.class
 de\dhbw\softwareengineering\taskmanagement\adapters\benutzer\BenutzerDto.class
 de\dhbw\softwareengineering\taskmanagement\adapters\benutzer\BenutzerEntityDtoMapper.class
+de\dhbw\softwareengineering\taskmanagement\adapters\aufgabe\ErinnerungDto.class

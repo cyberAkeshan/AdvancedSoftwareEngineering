@@ -19,8 +19,8 @@ public class AufgabeEntitiyToJpaMapper {
             mapEntityBenutzerToJpa(entity, jpa);
         }
 
-        if (entity.getFaelligkeit() != null) {
-            mapEntityFaelligkeitToJpa(entity, jpa);
+        if (entity.getErinnerungValue() != null) {
+            mapEntityErinnerungToJpa(entity, jpa);
         }
 
         if (entity.getKommentar() != null) {
@@ -76,12 +76,12 @@ public class AufgabeEntitiyToJpaMapper {
         throw new Exception("Jpa not found");
     }
 
-    private void mapEntityFaelligkeitToJpa(AufgabeEntity entity, AufgabeJpa jpa) {
-        if(entity.getFaelligkeit() == null) {
-            jpa.setFaelligkeit(null);
+    private void mapEntityErinnerungToJpa(AufgabeEntity entity, AufgabeJpa jpa) {
+        if(entity.getErinnerungValue() == null) {
+            jpa.setErinnerung(null);
             return;
         }
-        jpa.setFaelligkeit(entity.getFaelligkeit());
+        jpa.setErinnerung(entity.getErinnerungValue().getFaelligkeit());
     }
 
     private void mapEntityKommentarToJpa(AufgabeEntity entity, AufgabeJpa jpa) {
