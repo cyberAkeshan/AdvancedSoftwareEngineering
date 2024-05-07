@@ -9,6 +9,7 @@ public class AufgabeEntity {
     private boolean erledigt;
     private LocalDateTime faelligkeit;
     private Integer benutzer;
+    private PrioritaetValue prioritaet;
 
     public String getTitel() {
         return titel;
@@ -56,5 +57,13 @@ public class AufgabeEntity {
 
     public void setBenutzer(Integer benutzer) {
         this.benutzer = benutzer;
+    }
+
+    public PrioritaetValue getPrioritaet() {
+        return prioritaet;
+    }
+
+    public void setPrioritaet(int prioritaetCode) {
+        this.prioritaet.setPrioritaet(prioritaetCode);
     }
 }

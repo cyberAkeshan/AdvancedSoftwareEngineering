@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 public class BenutzerEntityDtoMapper {
     public BenutzerDto mapEntityToDto(BenutzerEntity entity) {
         BenutzerDto dto = new BenutzerDto();
+        dto.setId(entity.getId());
         dto.setVorname(entity.getVorname());
         dto.setNachname(entity.getNachname());
         dto.setEmail(entity.getEmail());

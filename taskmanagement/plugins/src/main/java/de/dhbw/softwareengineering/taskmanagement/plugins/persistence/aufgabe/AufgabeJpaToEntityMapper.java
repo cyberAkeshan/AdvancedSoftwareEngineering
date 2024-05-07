@@ -19,6 +19,7 @@ public class AufgabeJpaToEntityMapper {
         aufgabeEntity.setFaelligkeit(aufgabeJpa.getFaelligkeit());
         aufgabeEntity.setSchluesselwort(aufgabeJpa.getSchluesselwort());
         aufgabeEntity.setBenutzer(aufgabeJpa.getBenutzer());
+        aufgabeEntity.setPrioritaet(aufgabeJpa.getPrioritaet());
         //aufgabeEntity.setKommentar(aufgabeJpa.getKommentar());
         // ....
         return aufgabeEntity;

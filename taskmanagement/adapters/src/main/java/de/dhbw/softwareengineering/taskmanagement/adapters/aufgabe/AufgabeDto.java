@@ -10,7 +10,7 @@ public class AufgabeDto {
     private boolean erledigt;
     private LocalDateTime faelligkeit;
     private Integer benutzer;
-
+    private PrioritaetDto prioritaet;
 
     public String getTitel() {
         return titel;
@@ -58,5 +58,13 @@ public class AufgabeDto {
 
     public void setBenutzer(Integer benutzer) {
         this.benutzer = benutzer;
+    }
+
+    public PrioritaetDto getPrioritaet() {
+        return prioritaet;
+    }
+
+    public void setPrioritaet(int prioritaetCode) {
+        this.prioritaet.setPrioritaet(prioritaetCode);
     }
 }

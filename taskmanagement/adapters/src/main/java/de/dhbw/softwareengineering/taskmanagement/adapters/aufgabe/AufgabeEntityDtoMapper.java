@@ -8,6 +8,7 @@ public class AufgabeEntityDtoMapper {
 
     public AufgabeDto mapEntityToDto(AufgabeEntity entity) {
         AufgabeDto dto = new AufgabeDto();
+        dto.setPrioritaet(entity.getPrioritaet().getPrioritaetCode());
         dto.setTitel(entity.getTitel());
         dto.setKommentar(entity.getKommentar());
         dto.setSchluesselwort(entity.getSchluesselwort());

@@ -1,5 +1,6 @@
 package de.dhbw.softwareengineering.taskmanagement.plugins.persistence.aufgabe;
 
+import de.dhbw.softwareengineering.taskmanagement.domain.aufgabe.PrioritaetValue;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -33,7 +34,17 @@ public class AufgabeJpa {
     @Column(name = "benutzer")
     private Integer benutzer;
 
+    @Basic
+    @Column(name = "prioritaet")
+    private int prioritaet;
 
+    public Integer getPrioritaet() {
+        return prioritaet;
+    }
+
+    public void setPrioritaet(int prioritaet) {
+        this.prioritaet = prioritaet;
+    }
     public Integer getBenutzer() {
         return benutzer;
     }

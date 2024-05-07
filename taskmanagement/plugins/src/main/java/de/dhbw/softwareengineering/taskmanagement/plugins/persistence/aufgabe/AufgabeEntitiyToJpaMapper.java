@@ -31,6 +31,10 @@ public class AufgabeEntitiyToJpaMapper {
             mapEntitySchluesselwortToJpa(entity, jpa);
         }
 
+        if(entity.getPrioritaet() != null) {
+            mapEntityPrioritaetToJpa(entity, jpa);
+        }
+
         mapEntityErledigtToJpa(entity, jpa);
 
         aufgabeJpaRepository.save(jpa);
@@ -106,6 +110,14 @@ public class AufgabeEntitiyToJpaMapper {
             return;
         }
         jpa.setBenutzer(entity.getBenutzer());
+    }
+
+    private void mapEntityPrioritaetToJpa(AufgabeEntity entity, AufgabeJpa jpa) {
+        if(entity.getPrioritaet() == null) {
+            jpa.setPrioritaet(0);
+            return;
+        }
+        jpa.setPrioritaet(entity.getPrioritaet().getPrioritaetCode());
     }
 
     // ?
