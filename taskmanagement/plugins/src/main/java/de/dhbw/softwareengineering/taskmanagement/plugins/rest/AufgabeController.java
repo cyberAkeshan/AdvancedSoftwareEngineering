@@ -54,4 +54,10 @@ public class AufgabeController {
     public void deleteAufgabe(@PathVariable String titel) {
         aufgabeService.delete(titel);
     }
+
+    @PutMapping("aufgabe/sendErinnerung")
+    public void sendErinnerung(@RequestBody AufgabeDto dto) {
+        aufgabeService.sendErinnerung(dto);
+    }
+
 }

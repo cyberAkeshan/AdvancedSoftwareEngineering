@@ -3,8 +3,10 @@ package de.dhbw.softwareengineering.taskmanagement.application;
 import de.dhbw.softwareengineering.taskmanagement.adapters.aufgabe.AufgabeDto;
 import de.dhbw.softwareengineering.taskmanagement.adapters.aufgabe.AufgabeDtoToEntityMapper;
 import de.dhbw.softwareengineering.taskmanagement.adapters.aufgabe.AufgabeEntityDtoMapper;
+import de.dhbw.softwareengineering.taskmanagement.adapters.benutzer.BenutzerDto;
 import de.dhbw.softwareengineering.taskmanagement.domain.aufgabe.AufgabeEntity;
 import de.dhbw.softwareengineering.taskmanagement.domain.aufgabe.AufgabeRepository;
+import de.dhbw.softwareengineering.taskmanagement.domain.aufgabe.SendErinnerung;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -50,7 +52,13 @@ public class AufgabeService {
     // ??
     public void sendErinnerung (AufgabeDto dto) {
         BenutzerService benutzerService = new BenutzerService();
-        benutzerService.findBenutzerById(dto.getBenutzer());
+        Optional<BenutzerDto> benutzerDto = benutzerService.findBenutzerById(dto.getBenutzer());
+        AufgabeDtoToEntityMapper dtoEntityMapper = new AufgabeDtoToEntityMapper();
+
+        if(benutzerDto.isPresent()) // ist das refactoring?
+        {
+            SendErinnerung sendErinnerung = new SendErinnerung(benutzerDto.get().getEmail(), dtoEntityMapper.mapDToEntity(dto));
+        }
     }
 
 }

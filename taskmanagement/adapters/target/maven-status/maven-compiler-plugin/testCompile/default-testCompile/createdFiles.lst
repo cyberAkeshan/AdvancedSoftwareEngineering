@@ -1,0 +1,4 @@
+de\dhbw\softwareengineering\taskmanagement\adapters\aufgabe\AufgabeEntityToDtoMapperTest.class
+de\dhbw\softwareengineering\taskmanagement\adapters\benutzer\BenutzerDtoToEntityMapperTest.class
+de\dhbw\softwareengineering\taskmanagement\adapters\benutzer\BenutzerEntityToDtoMapperTest.class
+de\dhbw\softwareengineering\taskmanagement\adapters\aufgabe\AufgabeDtoToEntityMapperTest.class

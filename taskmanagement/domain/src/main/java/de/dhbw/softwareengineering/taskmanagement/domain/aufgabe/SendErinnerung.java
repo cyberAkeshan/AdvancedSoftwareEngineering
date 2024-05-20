@@ -6,26 +6,25 @@ import org.springframework.mail.javamail.JavaMailSender;
 import java.time.LocalDateTime;
 
 public class SendErinnerung {
-
-    private BenutzerEntity benutzerEntity; // refactor?
     private AufgabeEntity aufgabeEntity;
 
-    public SendErinnerung(BenutzerEntity benutzerEntity, AufgabeEntity aufgabeEntity) {
-        this.benutzerEntity = benutzerEntity;
+    // Konstruktor, der bei Instanziierung überprüft ob Faelligkeit eingetroffen ist
+    public SendErinnerung(String benutzerEmail, AufgabeEntity aufgabeEntity) {
         this.aufgabeEntity = aufgabeEntity;
 
         LocalDateTime aktuelleZeit = LocalDateTime.now();
         if (aktuelleZeit.isBefore(aufgabeEntity.getErinnerungValue().getFaelligkeit())) {
-            String benutzerEntityEmail = benutzerEntity.getEmail();
             String subject = "Aufgabe ist fällig";
-            String message = "Hallo " + benutzerEntity.getVorname() + benutzerEntity.getNachname() + " ihre Aufgabe " + aufgabeEntity.getTitel() + " ist am " + aufgabeEntity.getErinnerungValue().getFaelligkeit() + " fällig";
-            sendEmail(benutzerEntityEmail, subject, message);
+            String message = "Die Aufgabe " + aufgabeEntity.getTitel() + " ist am " + aufgabeEntity.getErinnerungValue().getFaelligkeit() + " fällig";
+            sendEmail(benutzerEmail, subject, message);
             System.out.println("Email versendet.");
         }
         else {
-            System.out.println("Keine Erinnerung erforderlic. Fälligkeit liegt in der Zukunft");
+            System.out.println("Keine Erinnerung erforderlich. Fälligkeit liegt in der Zukunft");
         }
     }
+
+    // Email versenden
     public void sendEmail(String toEmail, String subject, String text) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom("akeshankunarajah@gmail.com");
