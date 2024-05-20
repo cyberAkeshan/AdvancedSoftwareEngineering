@@ -26,7 +26,7 @@ public class PrioritaetDto {
 
     private Prioritaet prioritaet;
 
-    public PrioritaetDto() {
+    public PrioritaetDto(Prioritaet prioritaet) {
         this.prioritaet = Prioritaet.EINFACH; // Standardwert: EINFACH
     }
 
